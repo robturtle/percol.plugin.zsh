@@ -16,6 +16,15 @@ if exists percol; then
     }
     zle -N percol_select_history
     bindkey '^R' percol_select_history
+    
+    function percol_git_checkout() {
+        local tac
+        br=`git branch | percol | sed 's/*//' | sed 's/ //g'`
+        git checkout $br >/dev/null
+        zle -R -c
+    }
+    zle -N percol_git_checkout
+    bindkey '^T' percol_git_checkout
 
     ## use `fg 1` just like under BASH, no need to type `fg %1`
     fg() {
