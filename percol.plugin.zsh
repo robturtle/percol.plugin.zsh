@@ -18,7 +18,7 @@ if exists percol; then
     bindkey '^R' percol_select_history
     
     function percol_git_checkout() {
-        br=`git branch | percol | sed 's/*//' | sed 's/ //g'`
+        br=`git branch | sed /^\*/d | percol | sed 's/*//' | sed 's/ //g'`
         test -z $br && return 1
         git checkout $br >/dev/null
         zle -R -c
