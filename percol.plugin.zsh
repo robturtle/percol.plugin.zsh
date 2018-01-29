@@ -29,17 +29,17 @@ if exists percol; then
         version=`ls db/migrate | tail -r | percol | sed 's/\.rb$//'`
         test -z $version && return 1
         echo "reverting test db..."
-        rake db:migrate:down VERSION=$version RAILS_ENV=test
+        bundle exec rake db:migrate:down VERSION=$version RAILS_ENV=test
         echo "reverting development db..."
-        rake db:migrate:down VERSION=$version
+        bundle exec rake db:migrate:down VERSION=$version
     }
     bindkey -s '^U' 'percol_rake_down\n'
 
     function rake_migrate() {
         echo "migrating test db..."
-        rake db:migrate:with_data RAILS_ENV=test
+        bundle exec rake db:migrate:with_data RAILS_ENV=test
         echo "migrating development db..."
-        rake db:migrate:with_data
+        bundle exec rake db:migrate:with_data
     }
 
     ## use `fg 1` just like under BASH, no need to type `fg %1`
