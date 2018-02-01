@@ -61,4 +61,7 @@ if exists percol; then
     }
     zle -N percol_resume_job
     bindkey '^Q' percol_resume_job
+
+    ## a way to browse all aliases
+    alias a='alias | percol'
 fi
