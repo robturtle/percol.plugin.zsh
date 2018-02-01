@@ -11,6 +11,10 @@ percol.
 1. Use `Ctrl-R` to search the history.
 
   ![interactively search history](https://www.dropbox.com/s/2ke80q5uswz7sqf/percol.plugin1.gif?raw=1)
+  
+1. Use `Ctrl-T` to switch to another git branch
+
+1. Use `Ctrl-U` to rollback specific migration
 
 2. Use `Ctrl-Q` to resume background jobs.
 
