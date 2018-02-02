@@ -14,6 +14,8 @@ percol.
   
 1. Use `Ctrl-T` to switch to another git branch
 
+1. User `Ctrl-H` to search aliases
+
 1. Use `Ctrl-U` to rollback specific migration
 
 2. Use `Ctrl-Q` to resume background jobs.
