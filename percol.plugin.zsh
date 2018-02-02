@@ -62,6 +62,13 @@ if exists percol; then
     zle -N percol_resume_job
     bindkey '^Q' percol_resume_job
 
-    ## a way to browse all aliases
-    alias a='alias | percol'
+    ## browse all aliases
+    function browse_aliases() {
+        local tac
+        BUFFER=$(alias | percol --query "$LBUFFER" | sed "s/=.*$//")
+        CURSOR=$#BUFFER
+        zle -R -c
+    }
+    zle -N browse_aliases
+    bindkey '^H' browse_aliases
 fi
