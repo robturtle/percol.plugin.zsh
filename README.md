@@ -11,14 +11,16 @@ percol.
 1. Use `Ctrl-R` to search the history.
 
   ![interactively search history](https://www.dropbox.com/s/2ke80q5uswz7sqf/percol.plugin1.gif?raw=1)
-  
-1. Use `Ctrl-T` to switch to another git branch
 
-1. User `Ctrl-H` to search aliases
+2. User `Ctrl-H` to search aliases
 
-1. Use `Ctrl-U` to rollback specific migration
+   ![](https://www.dropbox.com/s/kvl2lahk7untk64/percol_browse_aliases.gif?raw=1)
 
-2. Use `Ctrl-Q` to resume background jobs.
+3. Use `Ctrl-T` to switch to another git branch
+
+4. Use `Ctrl-U` to rollback specific migration
+
+5. Use `Ctrl-Q` to resume background jobs.
 
   ![interactively resume background jbos](https://www.dropbox.com/s/u5t5l7jeznv06y8/percol.plugin2.gif?raw=1)
 
@@ -26,13 +28,13 @@ percol.
 
 0. [Install percol](https://github.com/mooz/percol) by running the following:
 
-  ```
-  pip install percol
-  ```
+   ```
+   pip install percol
+   ```
 
 1. Clone the repository into your custom folder. Assuming your custom folder is
    at `~/.oh-my-zsh/custom`
-    
+
   ```
   mkdir -p ~/.oh-my-zsh/custom/plugins
   git clone https://github.com/robturtle/percol.plugin.zsh.git ~/.oh-my-zsh/custom/plugins/percol
