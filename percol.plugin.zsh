@@ -64,7 +64,6 @@ if exists percol; then
 
     ## browse all aliases
     function browse_aliases() {
-        local tac
         BUFFER=$(alias | percol --query "$LBUFFER" | sed "s/=.*$//")
         CURSOR=$#BUFFER
         zle -R -c
