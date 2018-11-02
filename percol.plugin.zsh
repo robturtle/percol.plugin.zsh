@@ -16,9 +16,10 @@ if exists percol; then
     }
     zle -N percol_select_history
     bindkey '^R' percol_select_history
-    
+
     function percol_git_checkout() {
-        br=`git branch | sed /^\*/d | percol | sed 's/*//' | sed 's/ //g'`
+        #        recent used                                                     all local branches
+        br=`cat <(git reflog| grep checkout: | sed '1d' | awk 'NF>1{print $NF}') <(git branch | sed '/^\*/d' | sed 's/^ *//') | awk '!x[$0]++' | percol`
         test -z $br && return 1
         git checkout $br >/dev/null
         zle -R -c
