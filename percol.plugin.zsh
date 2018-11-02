@@ -22,7 +22,6 @@ if exists percol; then
         br=`cat <(git reflog| grep checkout: | sed '1d' | awk 'NF>1{print $NF}') <(git branch | sed '/^\*/d' | sed 's/^ *//') | awk '!x[$0]++' | percol`
         test -z $br && return 1
         git checkout $br >/dev/null
-        zle -R -c
     }
     bindkey -s '^T' 'percol_git_checkout\n'
 
