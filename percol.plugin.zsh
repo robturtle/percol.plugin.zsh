@@ -31,13 +31,6 @@ if exists percol; then
     }
     bindkey -s '^U' 'percol_rake_down\n'
 
-    function rake_migrate() {
-        echo "migrating test db..."
-        bundle exec rake db:migrate RAILS_ENV=test
-        echo "migrating development db... NOT RUNNING data migration!"
-        bundle exec rake db:migrate
-    }
-
     ## use `fg 1` just like under BASH, no need to type `fg %1`
     fg() {
         if [[ $# -eq 1 && $1 = - ]]; then
