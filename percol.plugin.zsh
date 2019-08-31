@@ -26,11 +26,7 @@ if exists percol; then
     bindkey -s '^T' 'percol_git_checkout\n'
 
     function percol_rake_down() {
-        version=`ls db/migrate | tail -r | percol | sed 's/\.rb$//'`
-        test -z $version && return 1
-        echo "reverting test db..."
-        bundle exec rake db:migrate:down VERSION=$version RAILS_ENV=test
-        echo "reverting development db..."
+        version=`ls db/migrate | tail -r | percol | sed 's/_\w+\.rb$//'`
         bundle exec rake db:migrate:down VERSION=$version
     }
     bindkey -s '^U' 'percol_rake_down\n'
