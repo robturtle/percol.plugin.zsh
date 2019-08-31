@@ -45,3 +45,9 @@ percol.
   ```
   plugins=(percol)
   ```
+
+### Update
+
+```
+cd ~/.oh-my-zsh/custom/plugins/percol && git pull && cd -
+```
