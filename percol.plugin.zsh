@@ -21,9 +21,12 @@ if exists percol; then
         #        recent used                                                     all local branches
         br=`cat <(git reflog| grep checkout: | sed '1d' | awk 'NF>1{print $NF}') <(git branch | sed '/^\*/d' | sed 's/^ *//') | awk '!x[$0]++' | percol`
         test -z $br && return 1
-        git checkout $br >/dev/null
+        BUFFER="git checkout ${br}"
+        CURSOR=$#BUFFER
+        zle -R -c
     }
-    bindkey -s '^T' 'percol_git_checkout\n'
+    zle -N percol_git_checkout
+    bindkey '^T' percol_git_checkout
 
     function percol_rake_down() {
         version=`ls db/migrate | tail -r | percol | sed 's/_\w+\.rb$//'`
