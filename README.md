@@ -2,8 +2,8 @@
 
 **Maintainer:** [@robturtle](https://github.com/robturtle)
 
-It provides two functionalties that allows you search history and resume
-background jobs with interatively incremental searching utility powered by
+It provides two functionalities that allows you search history and resume
+background jobs with interactively incremental searching utility powered by
 percol.
 
 ### Usage
@@ -22,7 +22,7 @@ percol.
 
 5. Use `Ctrl-Q` to resume background jobs.
 
-  ![interactively resume background jbos](https://www.dropbox.com/s/u5t5l7jeznv06y8/percol.plugin2.gif?raw=1)
+  ![interactively resume background jobs](https://www.dropbox.com/s/u5t5l7jeznv06y8/percol.plugin2.gif?raw=1)
 
 ### Installation
 
