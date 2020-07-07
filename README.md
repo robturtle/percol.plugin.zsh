@@ -29,8 +29,9 @@ percol.
 0. [Install percol](https://github.com/mooz/percol) by running the following:
 
    ```
-   pip install percol
+   pip2 install percol
    ```
+   Please ensure you're using Python 2. [Python 3 is not supported](https://github.com/mooz/percol/issues/107).
 
 1. Clone the repository into your custom folder. Assuming your custom folder is
    at `~/.oh-my-zsh/custom`
