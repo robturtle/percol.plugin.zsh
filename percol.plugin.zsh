@@ -1,6 +1,10 @@
 #!/bin/zsh
 # Functions
 
+function exists {
+    which $1 &> /dev/null
+}
+
 ## Searching zsh history
 function percol_select_history() {
     local tac
