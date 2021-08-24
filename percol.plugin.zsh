@@ -27,15 +27,6 @@ function percol_git_checkout() {
 zle -N percol_git_checkout
 bindkey '^T' percol_git_checkout
 
-function percol_rake_down() {
-    version=`ls db/migrate | tail -r | percol | sed 's/_\w+\.rb$//'`
-    BUFFER="bundle exec rake db:migrate:down VERSION=${version}"
-    CURSOR=$#BUFFER
-    zle -R -c
-}
-zle -N percol_rake_down
-bindkey '^U' percol_rake_down
-
 ## use `fg 1` just like under BASH, no need to type `fg %1`
 fg() {
     if [[ $# -eq 1 && $1 = - ]]; then

@@ -18,8 +18,6 @@ percol.
 
 3. Use `Ctrl-T` to switch to another git branch
 
-4. Use `Ctrl-U` to rollback specific migration
-
 5. Use `Ctrl-Q` to resume background jobs.
 
   ![interactively resume background jobs](https://www.dropbox.com/s/u5t5l7jeznv06y8/percol.plugin2.gif?raw=1)
@@ -29,9 +27,8 @@ percol.
 0. [Install percol](https://github.com/mooz/percol) by running the following:
 
    ```
-   pip2 install percol
+   pip install percol
    ```
-   Please ensure you're using Python 2. [Python 3 is not supported](https://github.com/mooz/percol/issues/107).
 
 1. Clone the repository into your custom folder. Assuming your custom folder is
    at `~/.oh-my-zsh/custom`
@@ -47,7 +44,7 @@ percol.
   plugins=(percol)
   ```
 
-### Update
+### Upgrade
 
 ```
 cd ~/.oh-my-zsh/custom/plugins/percol && git pull && cd -
